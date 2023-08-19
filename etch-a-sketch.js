@@ -15,9 +15,15 @@ const shakebutton = document.querySelector('.shake');
 console.log(shakebutton);
 
 //Set up our canvas for drawing
-//Selecting a random spot on the page
+//Finding height and width of canvas
 const width = canvas.width;
 const height = canvas.height;
+
+//Creating random x and y coordinate for our starting point
+let x = Math.floor(Math.random() * width);
+let y = Math.floor(Math.random() * width);
+
+
 console.log(`Canvas width is ${width}, canvas height is ${height}`);
 //Setting defaults on the canvas - to make sure lines are rounded
 ctx.lineJoin = 'round';
@@ -27,8 +33,8 @@ ctx.lineWidth = 10;
 //Start the drawing - put the marker on the page
 ctx.beginPath();
 //Making the line on the page
-ctx.moveTo(200, 200);
-ctx.lineTo(200, 200);
+ctx.moveTo(x, y);
+ctx.lineTo(x, y);
 ctx.stroke();
 
 
