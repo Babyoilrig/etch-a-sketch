@@ -50,7 +50,7 @@ ctx.stroke();
 //Here passing the object - key to the function using destructuring
 function draw({key}) {
     //Increment the hue
-    hue = hue + 1;
+    hue = hue + 10;
     //Here explicitly updating the stroke style
     ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
     console.log(key);
@@ -101,6 +101,12 @@ function handleKey(e) {
 }
 
 //Clear or shake function 
+function clearCanvas() {
+    canvas.classList.add('shake');
+    canvas.addEventListener('animationend', function() {
+        canvas.classList.remove('shake');
+    } )
+}
 
 //Listen for arrow keys
 window.addEventListener('keydown', handleKey);
