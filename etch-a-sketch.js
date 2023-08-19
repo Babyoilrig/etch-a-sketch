@@ -13,6 +13,8 @@ const ctx = canvas.getContext('2d');
 //Select elements on the page - canvas, shake button
 const shakebutton = document.querySelector('.shake');
 // console.log(shakebutton);
+//Adding move amount - in caps and underscores as it is a true constant
+const MOVE_AMOUNT = 10;
 
 //Set up our canvas for drawing
 //Finding height and width of canvas
@@ -25,10 +27,11 @@ let y = Math.floor(Math.random() * height);
 
 
 // console.log(`Canvas width is ${width}, canvas height is ${height}`);
+
 //Setting defaults on the canvas - to make sure lines are rounded
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = 10;
+ctx.lineWidth = MOVE_AMOUNT;
 
 //Start the drawing - put the marker on the page
 ctx.beginPath();
@@ -47,8 +50,8 @@ function draw({key}) {
     ctx.beginPath();
     ctx.moveTo(x, y);
     //Move our x and y values depending on what the user did
-    x = x - 10;
-    y = y - 10;
+    x = x - MOVE_AMOUNT;
+    y = y - MOVE_AMOUNT;
     ctx.lineTo(x, y);
     ctx.stroke();
 }
