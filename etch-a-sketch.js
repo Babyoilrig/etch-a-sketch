@@ -43,9 +43,14 @@ ctx.stroke();
 
 //Write a handler for the keys
 function handleKey(e) {
-    e.preventDefault();
-    console.log(e.key);
-   console.log('HANDLING KEY'); 
+    //Adding if statement to check if it is an arrow key
+    if (e.key.includes('Arrow')) {
+        e.preventDefault();
+        console.log(e.key);
+       console.log('HANDLING KEY'); 
+
+    }
+    
 }
 
 //Clear or shake function 
