@@ -21,7 +21,7 @@ const height = canvas.height;
 
 //Creating random x and y coordinate for our starting point
 let x = Math.floor(Math.random() * width);
-let y = Math.floor(Math.random() * width);
+let y = Math.floor(Math.random() * height);
 
 
 console.log(`Canvas width is ${width}, canvas height is ${height}`);
@@ -39,14 +39,14 @@ ctx.stroke();
 
 
 
-
-
-
-
 //Write a draw function 
 
 //Write a handler for the keys
+function handleKey() {
+   console.log('HANDLING KEY'); 
+}
 
 //Clear or shake function 
 
 //Listen for arrow keys
+window.addEventListener('keydown', handleKey);
