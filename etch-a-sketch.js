@@ -33,6 +33,10 @@ ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = MOVE_AMOUNT;
 
+//Creating the colour
+let hue = 0;
+ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
 //Start the drawing - put the marker on the page
 ctx.beginPath();
 //Making the line on the page
@@ -45,6 +49,10 @@ ctx.stroke();
 //Write a draw function 
 //Here passing the object - key to the function using destructuring
 function draw({key}) {
+    //Increment the hue
+    hue = hue + 1;
+    //Here explicitly updating the stroke style
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
     console.log(key);
     //Start the path
     ctx.beginPath();
