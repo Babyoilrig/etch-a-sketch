@@ -50,8 +50,30 @@ function draw({key}) {
     ctx.beginPath();
     ctx.moveTo(x, y);
     //Move our x and y values depending on what the user did
-    x = x - MOVE_AMOUNT;
-    y = y - MOVE_AMOUNT;
+    //Switch statement as have multiple scenarios
+    switch (key) {
+//default case - this is needed for switch statement
+        default:
+            break;
+//case for ArrowUp
+        case 'ArrowUp':
+            y = y - MOVE_AMOUNT;
+            break;
+//case for ArrowDown
+        case 'ArrowDown':
+            y = y + MOVE_AMOUNT;
+            break;
+//case for ArrowRight
+        case 'ArrowRight':
+            x = x + MOVE_AMOUNT;
+            break;
+//case for ArrowLeft
+        case 'ArrowLeft':
+            x = x - MOVE_AMOUNT;
+            break;
+
+
+    }
     ctx.lineTo(x, y);
     ctx.stroke();
 }
