@@ -104,6 +104,8 @@ function handleKey(e) {
 function clearCanvas() {
     //Adding class of shake - which relates to css animation
     canvas.classList.add('shake');
+    //Functionality to clear canvas
+    ctx.clearRect(0, 0, width, height);
     //Listening for animation to end
     //Once ended remove class of shake
     canvas.addEventListener('animationend', function() {
@@ -116,3 +118,4 @@ function clearCanvas() {
 
 //Listen for arrow keys
 window.addEventListener('keydown', handleKey);
+shakebutton.addEventListener('click', clearCanvas);
