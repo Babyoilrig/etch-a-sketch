@@ -1,4 +1,4 @@
-console.log('It works!');
+// console.log('It works!');
 
 //Plan
 //Select elements on the page - canvas, shake button
@@ -12,7 +12,7 @@ const ctx = canvas.getContext('2d');
 //Selecting the shake button
 //Select elements on the page - canvas, shake button
 const shakebutton = document.querySelector('.shake');
-console.log(shakebutton);
+// console.log(shakebutton);
 
 //Set up our canvas for drawing
 //Finding height and width of canvas
@@ -24,7 +24,7 @@ let x = Math.floor(Math.random() * width);
 let y = Math.floor(Math.random() * height);
 
 
-console.log(`Canvas width is ${width}, canvas height is ${height}`);
+// console.log(`Canvas width is ${width}, canvas height is ${height}`);
 //Setting defaults on the canvas - to make sure lines are rounded
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
@@ -44,6 +44,7 @@ ctx.stroke();
 //Write a handler for the keys
 function handleKey(e) {
     e.preventDefault();
+    console.log(e.key);
    console.log('HANDLING KEY'); 
 }
 
