@@ -42,7 +42,8 @@ ctx.stroke();
 //Write a draw function 
 
 //Write a handler for the keys
-function handleKey() {
+function handleKey(e) {
+    e.preventDefault();
    console.log('HANDLING KEY'); 
 }
 
