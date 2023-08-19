@@ -18,6 +18,17 @@ console.log(shakebutton);
 //Setting defaults on the canvas - to make sure lines are rounded
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
+ctx.lineWidth = 10;
+
+//Start the drawing - put the marker on the page
+ctx.beginPath();
+//Making the line on the page
+ctx.moveTo(200, 200);
+ctx.lineTo(200, 200);
+ctx.stroke();
+
+
+
 
 
 //Write a draw function 
