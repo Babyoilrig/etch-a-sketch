@@ -102,10 +102,16 @@ function handleKey(e) {
 
 //Clear or shake function 
 function clearCanvas() {
+    //Adding class of shake - which relates to css animation
     canvas.classList.add('shake');
+    //Listening for animation to end
+    //Once ended remove class of shake
     canvas.addEventListener('animationend', function() {
         canvas.classList.remove('shake');
-    } )
+    }, 
+    //Making sure the event listener is only added once
+    { once:true }
+    );
 }
 
 //Listen for arrow keys
