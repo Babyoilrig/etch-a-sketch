@@ -15,6 +15,10 @@ const shakebutton = document.querySelector('.shake');
 console.log(shakebutton);
 
 //Set up our canvas for drawing
+//Setting defaults on the canvas - to make sure lines are rounded
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+
 
 //Write a draw function 
 
