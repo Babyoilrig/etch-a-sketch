@@ -40,12 +40,18 @@ ctx.stroke();
 
 
 //Write a draw function 
+//Here passing an options object as there will be multiple properties to be passed
+function draw(options) {
+    console.log(options);
+}
 
 //Write a handler for the keys
 function handleKey(e) {
     //Adding if statement to check if it is an arrow key
     if (e.key.includes('Arrow')) {
         e.preventDefault();
+        //Call the draw function with object called e.key
+        draw({ key: e.key });
         console.log(e.key);
        console.log('HANDLING KEY'); 
 
