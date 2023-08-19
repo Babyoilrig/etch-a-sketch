@@ -40,9 +40,14 @@ ctx.stroke();
 
 
 //Write a draw function 
-//Here passing an options object as there will be multiple properties to be passed
-function draw(options) {
-    console.log(options);
+//Here passing the object - key to the function using destructuring
+function draw({key}) {
+    console.log(key);
+    //Start the path
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    //Move our x and y values depending on what the user did
+    
 }
 
 //Write a handler for the keys
@@ -52,8 +57,8 @@ function handleKey(e) {
         e.preventDefault();
         //Call the draw function with object called e.key
         draw({ key: e.key });
-        console.log(e.key);
-       console.log('HANDLING KEY'); 
+    //     console.log(e.key);
+    //    console.log('HANDLING KEY'); 
 
     }
     
