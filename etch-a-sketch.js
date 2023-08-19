@@ -2,7 +2,8 @@ console.log('It works!');
 
 //Plan
 //Select elements on the page - canvas, shake button
-
+const canvas = document.querySelector('#etch-a-sketch');
+console.log(canvas);
 //Set up our canvas for drawing
 
 //Write a draw function 
