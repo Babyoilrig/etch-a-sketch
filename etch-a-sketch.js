@@ -47,7 +47,10 @@ function draw({key}) {
     ctx.beginPath();
     ctx.moveTo(x, y);
     //Move our x and y values depending on what the user did
-    
+    x = x - 10;
+    y = y - 10;
+    ctx.lineTo(x, y);
+    ctx.stroke();
 }
 
 //Write a handler for the keys
